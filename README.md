@@ -1,12 +1,14 @@
 [SOFTSPIDERS](https://github.com/softspiders/softspiders)
 
-# *Nginx* as a reverse proxy for *NodeJS* in *Docker Compose*
+**UNDER DEVELOPMENT**
+
+# *Nginx* as a reverse proxy for *PHP* in *Docker Compose*
 
 ## Feature tags
 
 - docker-compose
 - nginx
-- node
+- php
 - reverse-proxy
 - starter
 - template
@@ -15,7 +17,7 @@
 
 ## Parents
 
-- [**- node, reverse-proxy**](https://github.com/AlexanderLapygin/nginx_docker-compose)
+- [**- php, reverse-proxy**](https://github.com/AlexanderLapygin/nginx_docker-compose)
 
 ---
 
@@ -31,7 +33,7 @@ Originate from [Docker compose example for NodeJS and Nginx Reverse Proxy](https
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/en/download/package-manager/)
+- [PHP](https://www.php.net/manual/en/install.php)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
 
