@@ -2,26 +2,26 @@
 version: '3'
 
 services:
-    node_service:
-        # Where to build from
-        build: server/
-        # What to name the image
-        # If build key not present, looks for image "node_image"
-        image: node_image
+    php_service:
+        image: php:7-fpm
+        volumes:
+            - ./code:/code
         # What to name the container
-        container_name: node_service_container
+        container_name: php_service_container
         restart: always
     nginx:
         build: nginx/
         image: nginx_rev-proxy_image
+        volumes:
+            - ./code:/code
         container_name: nginx_rev-proxy_container
-        # Wait for node_service before starting
+        # Wait for php_service before starting
         depends_on:
-            - node_service
+            - php_service
         # What ports to open
         ports:
             - "80:80"
         restart: always
-        # Allow nginx service to talk to node_service
+        # Allow nginx service to talk to php_service
         links:
-            - node_service
+            - php_service
